@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* background: linear-gradient(to bottom right, #dfe9f3, #ffffff);  */
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+}
+.container {
+    text-align: center;
+  }
+.title {
+    transition: color 0.3s ease-in-out;
+  }
+  
+.title:hover {
+    color: #ff5722; 
+}
+.buttonss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.button-row {
+    display: flex;
+    justify-content: center;
+}
+  
+.color-box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 4px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+  
+.flash {
+    opacity: 0.5;
+}
+  
+.userflash {
+    box-shadow: 0 0 20px white; 
+}
+  
+
+.flash{
+    background-color: white;
+}
+.userflash{
+    background-color: green;
+}
+
+.game-over {
+    animation: flash-red 0.3s ease-in-out, shake 0.5s;
+}
+  
+@keyframes flash-red {
+    0%   { background-color: red; }
+    100% { background-color: white; }
+}
+  
+@keyframes shake {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(-10px); }
+    50%  { transform: translateX(10px); }
+    75%  { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+  
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+  
