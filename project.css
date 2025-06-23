@@ -1,80 +1,59 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    /* background: linear-gradient(to bottom right, #dfe9f3, #ffffff);  */
-    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
-
-    flex-direction: column;
-    font-family: 'Segoe UI', sans-serif;
-}
 .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
     text-align: center;
-  }
-.title {
-    transition: color 0.3s ease-in-out;
-  }
-  
-.title:hover {
-    color: #ff5722; 
 }
+
+.title {
+    font-size: 2.5rem;
+    color: #333;
+}
+
 .buttonss {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
 }
-  
+
 .button-row {
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
-  
+
 .color-box {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    border: 4px solid black;
-    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    border: 5px solid #333;
     cursor: pointer;
-}
-  
-.flash {
-    opacity: 0.5;
-}
-  
-.userflash {
-    box-shadow: 0 0 20px white; 
-}
-  
-
-.flash{
-    background-color: white;
-}
-.userflash{
-    background-color: green;
+    opacity: 0.7;
+    transition: all 0.2s;
 }
 
-.game-over {
-    animation: flash-red 0.3s ease-in-out, shake 0.5s;
+.color-box:hover {
+    opacity: 1;
+    transform: scale(1.05);
 }
-  
-@keyframes flash-red {
-    0%   { background-color: red; }
-    100% { background-color: white; }
+
+.color-box:active {
+    transform: scale(0.95);
 }
-  
-@keyframes shake {
-    0%   { transform: translateX(0); }
-    25%  { transform: translateX(-10px); }
-    50%  { transform: translateX(10px); }
-    75%  { transform: translateX(-10px); }
-    100% { transform: translateX(0); }
+
+.active {
+    opacity: 1;
+    transform: scale(0.95);
+    box-shadow: 0 0 20px white;
 }
-  
-.fade-out {
-    opacity: 0;
-    transition: opacity 1s ease-out;
+
+.score, .high-score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
 }
-  
+
+#score, #high-score {
+    color: #0d6efd;
+}
